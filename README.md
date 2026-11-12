@@ -35,9 +35,9 @@ Para detener los contenedores, usa `docker compose down`. Los datos sobreviven a
 ## Probar la API
 
 ```sh
-curl http://localhost:3000/health
-curl http://localhost:3000/api/tasks
-curl -X POST http://localhost:3000/api/tasks -H "Content-Type: application/json" -d "{\"title\":\"Primera tarea\",\"description\":\"Prueba de extremo a extremo\"}"
+curl.exe http://localhost:3000/health
+curl.exe http://localhost:3000/api/tasks
+curl.exe -X POST http://localhost:3000/api/tasks -H "Content-Type: application/json" -d '{"title":"Primera tarea","description":"Prueba de extremo a extremo"}'
 ```
 
 Rutas disponibles:
