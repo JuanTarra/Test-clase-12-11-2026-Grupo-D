@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>Tablero de tareas</title>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <div>
+          <p class="eyebrow">CRUDL de ejemplo</p>
+          <h1>Tablero de tareas</h1>
+          <p class="subtitle">Una aplicación pequeña, lista para desplegar por partes.</p>
+        </div>
+        <span id="connection-status" class="connection" role="status">Conectando…</span>
+      </header>
+
+      <section class="panel" aria-labelledby="form-title">
+        <h2 id="form-title">Nueva tarea</h2>
+        <form id="task-form">
+          <label for="title">Título</label>
+          <input id="title" name="title" maxlength="120" required placeholder="Ej. Configurar el deploy" />
+          <label for="description">Descripción <span>(opcional)</span></label>
+          <textarea id="description" name="description" rows="3" maxlength="2000" placeholder="Agrega algún detalle"></textarea>
+          <div class="form-actions">
+            <button id="submit-button" type="submit">Crear tarea</button>
+            <button id="cancel-button" class="button-secondary" type="button" hidden>Cancelar edición</button>
+          </div>
+          <p id="form-message" class="message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="tasks-section" aria-labelledby="tasks-title">
+        <div class="section-heading">
+          <h2 id="tasks-title">Tareas</h2>
+          <button id="refresh-button" class="button-secondary" type="button">Actualizar lista</button>
+        </div>
+        <p id="list-message" class="message" aria-live="polite"></p>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
